@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Coze URL 自动粘贴工具",
+  "version": "1.0",
+  "description": "自动为Coze添加URL链接",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.coze.cn/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.coze.cn/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+} 

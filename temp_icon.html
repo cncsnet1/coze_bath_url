@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Icon</title>
+</head>
+<body>
+  <canvas id="iconCanvas" width="128" height="128"></canvas>
+  <script>
+    const canvas = document.getElementById('iconCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // 背景
+    ctx.fillStyle = '#2196F3';
+    ctx.fillRect(0, 0, 128, 128);
+    
+    // URL文字
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 40px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('URL', 64, 60);
+    
+    // 粘贴图标
+    ctx.beginPath();
+    ctx.moveTo(44, 70);
+    ctx.lineTo(84, 70);
+    ctx.lineTo(84, 100);
+    ctx.lineTo(44, 100);
+    ctx.closePath();
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 4;
+    ctx.stroke();
+    
+    // 右键点击canvas并保存为icon.png
+  </script>
+</body>
+</html> 
